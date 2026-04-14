@@ -8,6 +8,9 @@ public class AppointmentScheduler {
     
     // Method: addAppointment(name, date, time) [Geoff]
     // TODO: Logic: Create new Appointment object, save to array, increment count
+    static int addAppointment(String name, date, time){
+        
+    }
     
     // Method: hasConflict(date, time) [Justin]
     // TODO: Logic: Loop through array, return true if date/time matches existing entry
