@@ -1,14 +1,32 @@
 // MAIN METHOD
 // 4-305 [Castro, Rulida, Salcedo, Justin]
 package AppointmentSchedulingSystem;
-
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         // TODO: Instantiate AppointmentScheduler, FileManager, and Menu objects
         
-        // (display) MENU loop [BJ]
-            // (input) ask for user choice 1-7 [BJ]
-            
+        int menuChoice = 0;
+       do{
+           System.out.println("---MENU---");
+           System.out.println("1.Add Appointment");
+           System.out.println("2.View Appointments");
+           System.out.println("3.Check Conflicts");
+           System.out.println("4.Cancel Appointments");
+           System.out.println("5.Sort Appointments");
+           System.out.println("6.Save Schedule");
+           System.out.println("7.Exit");
+           System.out.print("Enter Choice: ");
+          menuChoice = scanner.nextInt();
+
+           if(menuChoice == 7){
+            System.out.println("Goodbye!");
+               break;
+           }
+           
+       }
+       while(menuChoice != 7);
             // (switch-case)
                 // case 1: Add Appointment [Geoff]
                     // (input) get name, date, and time from user
