@@ -37,8 +37,9 @@ public class Main {
                 // case 2: View Appointments [AJ]
                     // (logic) call viewAppointments()
                     
-                // case 3: Check Conflicts [Justin]
-                    // (logic) call checkConflicts() to scan entire array
+                case 3: // [Justin]
+                    scheduler.checkConflicts();
+                    break;
                     
                 // case 4: Cancel Appointment [Geoff]
                     // (input) get name/index to remove
