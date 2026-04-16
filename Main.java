@@ -35,7 +35,10 @@ public class Main {
                         // else -> add to array, display confirm msg
                         
                 // case 2: View Appointments [AJ]
-                    // (logic) call viewAppointments()
+                case 2: // View Appointments [AJ]
+                    scheduler.viewAppointments();
+                    break;
+        
                     
                 case 3: // [Justin]
                     scheduler.checkConflicts();
@@ -52,6 +55,13 @@ public class Main {
                     // (logic) call saveToFile()
                     
                 // case 7: Exit
-                    // (logic) break loop, close scanner
+                case 7: // Exit
+                    System.out.println("Exiting system...");
+                    running = false;
+                    menu.close();
+                    break;
+
+                default:
+                    System.out.println("Invalid choice. Try again.");
     }
 }
