@@ -8,7 +8,8 @@ public class AppointmentScheduler {
     
     // Method: addAppointment(name, date, time) [Geoff]
     // TODO: Logic: Create new Appointment object, save to array, increment count
-    static int addAppointment(String name, date, time){
+    static int addAppointment(String name, String date, String time){
+        
         
     }
     
