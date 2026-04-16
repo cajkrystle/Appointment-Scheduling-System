@@ -2,7 +2,7 @@
 package AppointmentSchedulingSystem;
   import java.util.Scanner;
 public class Menu {
-   public static int menuChoice;
+   public int menuChoice;
 
       Menu(int menuChoice){
        this.menuChoice = menuChoice;
@@ -32,7 +32,7 @@ public class Menu {
     // TODO: Logic: Read integer, handle invalid inputs
       public int getChoice(){
         String menuRemarks = " " ;
-           if(menuChoice != 1 || menuChoice !=2 || menuChoice !=3 || menuChoice !=4 || menuChoice !=5 || menuChoice !=6 || menuChoice != 7){
+           if(menuChoice < 1 && menuChoice > 7){
               menuRemarks = " Invalid Choice.";
            }
       }
