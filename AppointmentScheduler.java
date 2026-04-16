@@ -67,7 +67,12 @@ public class AppointmentScheduler {
     }
     
     // Method: viewAppointments() [AJ]
-    // TODO: Logic: Loop through array and print each Appointment
+    public void viewAppointments() {
+        System.out.println("\n--- Current Appointments ---");
+        for (int i = 0; i < count; i++) {
+            System.out.println(appointments[i].toString());
+        }
+    }
     
     // Method: cancelAppointment(name) [Geoff]
     // TODO: Logic: Find index of name, remove it, and shift array items left
