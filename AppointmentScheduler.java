@@ -13,10 +13,40 @@ public class AppointmentScheduler {
     }
     
     // Method: hasConflict(date, time) [Justin]
-    // TODO: Logic: Loop through array, return true if date/time matches existing entry
+    public boolean hasConflict(String date, String time) {
+        for (int i = 0; i < count; i++) {
+            if (appointments[i].date.equals(date) &&
+                appointments[i].time.equals(time)) {
+                return true;
+            }
+        }
+        return false;
+    }
     
     // Method: checkConflicts() [Justin]
-    // TODO: Logic: NESTED LOOP (compare i vs j) to find all pairs with same date/time
+    public void checkConflicts() {
+        boolean found = false;
+
+        for (int i = 0; i < count; i++) {
+            for (int j = i + 1; j < count; j++) {
+
+                if (appointments[i].date.equals(appointments[j].date) &&
+                    appointments[i].time.equals(appointments[j].time)) {
+
+                    System.out.println("Conflict Found:");
+                    System.out.println(appointments[i]);
+                    System.out.println(appointments[j]);
+                    System.out.println();
+
+                    found = true;
+                }
+            }
+        }
+
+        if (!found) {
+            System.out.println("No conflicts found.");
+        }
+    }
     
     // Method: viewAppointments() [AJ]
     // TODO: Logic: Loop through array and print each Appointment
