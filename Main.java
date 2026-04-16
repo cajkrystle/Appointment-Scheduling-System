@@ -29,6 +29,9 @@ public class Main {
        while(menuChoice != 7);
             // (switch-case)
                 // case 1: Add Appointment [Geoff]
+                case 1:
+                    scheduler.addAppointments();
+                    break;
                     // (input) get name, date, and time from user
                     // (logic) call hasConflict(date, time)
                         // if conflict -> display warning, back to menu
