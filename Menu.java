@@ -2,7 +2,9 @@
 package AppointmentSchedulingSystem;
   import java.util.Scanner;
 public class Menu {
-   
+   public static int menuChoice;
+
+  
   Scanner scanner = new Scanner(System.in);
     
     // Method: display() [BJ]
@@ -26,7 +28,7 @@ public class Menu {
     // Method: getChoice() [BJ]
     // TODO: Logic: Read integer, handle invalid inputs
       public int getChoice(){
-
+          
 
         
       }
