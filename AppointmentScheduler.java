@@ -3,13 +3,30 @@ package AppointmentSchedulingSystem;
 
 public class AppointmentScheduler {
     // TODO: Fields: Appointment[] array, int count, static int MAX_SIZE
-    
+    String[] appointments = new String[];
+    int count = 0;
+    int MAX_SIZE;
     // TODO: Constructor: initialize array and count
+    AppointmentScheduler {
+        
+        this.MAX_SIZE = 100;
+        
+    }
+
     
     // Method: addAppointment(name, date, time) [Geoff]
     // TODO: Logic: Create new Appointment object, save to array, increment count
     static int addAppointment(String name, String date, String time){
         
+        if(count == MAX_SIZE){
+            System.out.println("Error: Reached limit already");
+            break;
+        }
+        
+        appointments[count].date = date;
+        appointments[count].time = time;
+        
+        count++;
         
     }
     
