@@ -95,31 +95,19 @@ public class AppointmentScheduler {
         
         Scanner scan = new Scanner(System.in);
         
-        System.out.println("Enter Time:");
-        String time = scan.nextLine;
         System.out.println("Enter Name:");
         String name = scan.nextLine;
             
         for (int i = 0; i < count; i++) {
-            if(appointments[i].date.equals(date) && appointments[i].time.equals(time)){
-                appointments[i].date = null;
-                appointments[i].time = null;
-                appointments[i].name = null;
-
-                
+            if(appointments[i].name.equals(name)){
                 for (int j = i; j < count; j++){
                     appointments[j].date = appointments[j+1].date;
                     appointments[j].time = appointments[j+1].time;
                     appointments[j].name = appointments[j+1].name;
-                }
-                
-            }
-                
-        }
-        
-            
-        count--;
-        
+                }  
+            }      
+        }   
+        count--; 
     }
     
     // Method: sortAppointments() [Geoff]
