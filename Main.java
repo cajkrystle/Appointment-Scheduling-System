@@ -31,6 +31,7 @@ public class Main {
                 // case 1: Add Appointment [Geoff]
                 case 1:
                     scheduler.addAppointments();
+                    scheduler.checkConflicts();
                     break;
                     // (input) get name, date, and time from user
                     // (logic) call hasConflict(date, time)
