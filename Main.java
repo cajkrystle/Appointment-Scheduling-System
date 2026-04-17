@@ -1,10 +1,12 @@
 // MAIN METHOD
 // 4-305 [Castro, Rulida, Salcedo, Justin]
 package AppointmentSchedulingSystem;
-import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        FileManager file = new FileManager("Appointments.txt");
+        AppointmentScheduler scheduler = new AppointmentScheduler();
         // TODO: Instantiate AppointmentScheduler, FileManager, and Menu objects
         
         int menuChoice = 0;
@@ -50,12 +52,18 @@ public class Main {
                     
                 // case 4: Cancel Appointment [Geoff]
                     // (input) get name/index to remove
+                case 4:
+                    scheduler.cancelAppointment():
+                    break;
                     // (logic) call cancelAppointment()
                     
                 // case 5: Sort Appointments [Geoff]
                     // (logic) call sortAppointments()
                     
                 // case 6: Save Schedule [Geoff]
+                case 6:
+                    file.saveToFile(appointment[], count);
+                break;
                     // (logic) call saveToFile()
                     
                 // case 7: Exit
