@@ -58,12 +58,15 @@ public class Main {
                     // (logic) call cancelAppointment()
                     
                 // case 5: Sort Appointments [Geoff]
+                case 5:
+                    scheduler.sortAppointments();
+                    break;
                     // (logic) call sortAppointments()
                     
                 // case 6: Save Schedule [Geoff]
                 case 6:
                     file.saveToFile(appointment[], count);
-                break;
+                    break;
                     // (logic) call saveToFile()
                     
                 // case 7: Exit
