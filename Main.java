@@ -28,7 +28,7 @@ public class Main {
            }
            
        }
-       while(menuChoice != 7);
+     
             // (switch-case)
                 // case 1: Add Appointment [Geoff]
                 case 1:
@@ -79,4 +79,5 @@ public class Main {
                 default:
                     System.out.println("Invalid choice. Try again.");
     }
+    while(menuChoice != 7);
 }
