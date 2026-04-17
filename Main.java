@@ -1,7 +1,7 @@
 // MAIN METHOD
 // 4-305 [Castro, Rulida, Salcedo, Justin]
 package AppointmentSchedulingSystem;
-
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -53,7 +53,7 @@ public class Main {
                 // case 4: Cancel Appointment [Geoff]
                     // (input) get name/index to remove
                 case 4:
-                    scheduler.cancelAppointment():
+                    scheduler.cancelAppointment();
                     break;
                     // (logic) call cancelAppointment()
                     
