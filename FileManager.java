@@ -8,10 +8,13 @@ public class FileManager {
     // Method: saveToFile(Appointment[] list, int count) [Geoff]
     // TODO: Logic: Use PrintWriter/FileWriter to write array to .txt file
     saveToFile(Appointment[] list, int count){
-        int o = count;
         PrintWriter outFile = new PrintWriter("Schedule");
-			
-    	outFile.println(Appointment[o]);
 		
+		for(i = 0; i <= count; i++){
+			outFile.println(Appointment[i].name);
+			outFile.println(Appointment[i].date);
+			outFile.println(Appointment[i].time);
+			outFile.println();
+		}
     
 }
