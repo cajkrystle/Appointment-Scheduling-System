@@ -34,6 +34,13 @@ public class AppointmentScheduler {
         String time = scan.nextLine;
         System.out.println("Enter Name:");
         String name = scan.nextLine;
+
+        boolean con = hasConflict(date, time);
+
+        if(con == true){
+            System.out.println("Error: Appointment already saved");
+            break;
+        }
         
         Appointment appoint = new Appointment(name, date, time);
         
