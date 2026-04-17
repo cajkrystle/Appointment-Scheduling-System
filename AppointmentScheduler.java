@@ -118,5 +118,13 @@ public class AppointmentScheduler {
     }
     
     // Method: sortAppointments() [Geoff]
+    sortAppointments(){
+        
+        for (int i = 0; i < count; i++) {
+
+            
+        }
+        
+    }
     // TODO: Logic: Swap-sort algorithm to order appointments
 }
