@@ -1,20 +1,37 @@
-// FILE I/O CLASS
+// FILE MANAGER CLASS
+// 4-305 [Castro, Rulida, Salcedo, Timbal]
+
 package AppointmentSchedulingSystem;
-import java.io.PrintWriter;
+
+import java.io.*;
 
 public class FileManager {
-    // TODO: Field: filename String
-    
-    // Method: saveToFile(Appointment[] list, int count) [Geoff]
-    // TODO: Logic: Use PrintWriter/FileWriter to write array to .txt file
-    saveToFile(Appointment[] list, int count){
-        PrintWriter outFile = new PrintWriter("Schedule");
-		
-		for(i = 0; i <= count; i++){
-			outFile.println(Appointment[i].name);
-			outFile.println(Appointment[i].date);
-			outFile.println(Appointment[i].time);
-			outFile.println();
-		}
-    
+    private String filename;
+
+    public FileManager(String filename) {
+        this.filename = filename;
+    }
+
+    public void saveToFile(Appointment[] list, int count) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter(filename))) {
+            writer.println("===== APPOINTMENT SCHEDULE =====");
+            writer.println();
+            for (int d = 0; d < 7; d++) {
+                writer.println(Appointment.DAY_NAMES[d] + ":");
+                boolean hasAny = false;
+                for (int i = 0; i < count; i++) {
+                    if (list[i] != null && list[i].getDayIndex() == d) {
+                        writer.println("  - " + list[i].getName()
+                            + " | " + list[i].getTime());
+                        hasAny = true;
+                    }
+                }
+                if (!hasAny) writer.println("  (no appointments)");
+                writer.println();
+            }
+            System.out.println("File saved to " + filename);
+        } catch (IOException e) {
+            System.out.println("Error saving file: " + e.getMessage());
+        }
+    }
 }
